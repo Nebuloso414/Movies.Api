@@ -157,7 +157,7 @@ namespace Movies.Application.Repository
             return result > 0;
         }
 
-        async Task<bool> IMovieRepository.ExistsByIdAsync(Guid id, CancellationToken token = default)
+        public async Task<bool> ExistsByIdAsync(Guid id, CancellationToken token = default)
         {
             using var connection = await _dbConnectionFactory.CreateConnectionAsync(token);
             return await connection.ExecuteScalarAsync<bool>(new CommandDefinition("""
