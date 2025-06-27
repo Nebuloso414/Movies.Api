@@ -80,7 +80,7 @@ namespace Movies.Application.Repository
                     from movies m
                         left join ratings r on m.id = r.movieid
                         left join ratings myr on m.id = myr.movieid and myr.userid = @userId
-                    where id = @id
+                    where slug = @slug
                     group by id, userrating
                     """, new { slug, userId }, cancellationToken: token));
 
