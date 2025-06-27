@@ -1,6 +1,7 @@
-﻿using Movies.Contract.Requests;
-using Movies.Application.Models;
+﻿using Movies.Application.Models;
+using Movies.Contract.Requests;
 using Movies.Contract.Responses;
+using Movies.Contracts.Responses;
 
 namespace Movies.Api.Mapping
 {
@@ -48,6 +49,16 @@ namespace Movies.Api.Mapping
             {
                 Items = movies.Select(MapToResponse)
             };
+        }
+
+        public static IEnumerable<MovieRatingResponse> MapToResponse(this IEnumerable<MovieRating> ratings)
+        {
+            return ratings.Select(x => new MovieRatingResponse
+            {
+                Rating = x.Rating,
+                Slug = x.Slug,
+                MovieId = x.MovieId
+            });
         }
     }
 }
