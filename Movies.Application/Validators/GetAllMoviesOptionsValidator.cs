@@ -22,7 +22,14 @@ namespace Movies.Application.Validators
 
             RuleFor(x => x.SortField)
                 .Must(x => x is null || AcceptableSortFields.Contains(x, StringComparer.OrdinalIgnoreCase))
-                .WithMessage("You can only sort by 'title' or 'yearofrelease'");
+                .WithMessage("You can only sort by 'title' or 'yearofrelease'.");
+
+            RuleFor(x => x.Page)
+                .GreaterThanOrEqualTo(1);
+
+            RuleFor(x => x.PageSize)
+                .InclusiveBetween(1, 25)
+                .WithMessage("You can only get up to 25 movies per page.");
         }
     }
 }
