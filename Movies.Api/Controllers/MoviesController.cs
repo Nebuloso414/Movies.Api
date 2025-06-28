@@ -8,10 +8,12 @@ using Movies.Application.Services;
 using Microsoft.AspNetCore.Authorization;
 using Movies.Api.Auth;
 using Movies.Contracts.Requests;
+using Asp.Versioning;
 
 namespace Movies.Api.Controllers
 {
     [ApiController]
+    [ApiVersion(1.0)]
     public class MoviesController : ControllerBase
     {
         private readonly IMovieService _movieService;
@@ -27,12 +29,12 @@ namespace Movies.Api.Controllers
         {
             var movie = request.MapToMovie();
             await _movieService.CreateAsync(movie, token);
-            return CreatedAtAction(nameof(Get), new { idOrSlug = movie.Id }, movie);
+            return CreatedAtAction(nameof(GetV1), new { idOrSlug = movie.Id }, movie);
             //return Created($"{ApiEndpoints.Movies.Get}/{movie.Id}", movie);
         }
 
         [HttpGet(ApiEndpoints.Movies.Get)]
-        public async Task<IActionResult> Get([FromRoute] string idOrSlug, CancellationToken token)
+        public async Task<IActionResult> GetV1([FromRoute] string idOrSlug, CancellationToken token)
         {
             var userId = HttpContext.GetUserId();
 
