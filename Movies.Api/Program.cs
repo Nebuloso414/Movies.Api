@@ -9,6 +9,7 @@ using Asp.Versioning;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using Movies.Api.Swagger;
+using Movies.Api.Health;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
@@ -53,7 +54,8 @@ builder.Services.AddApiVersioning(x =>
 
 builder.Services.AddControllers();
 
-builder.Services.AddHealthChecks();
+builder.Services.AddHealthChecks()
+    .AddCheck<DatabaseHealthCheck>(DatabaseHealthCheck.Name);
 
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 builder.Services.AddSwaggerGen(x => x.OperationFilter<SwaggerDefaultValues>());
