@@ -1,6 +1,6 @@
-﻿using Movies.Application.Database;
+﻿using Dapper;
+using Movies.Application.Database;
 using Movies.Application.Models;
-using Dapper;
 
 namespace Movies.Application.Repository
 {

@@ -1,11 +1,6 @@
 ﻿using Dapper;
 using Movies.Application.Database;
 using Movies.Application.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Movies.Application.Repository
 {
@@ -44,7 +39,7 @@ namespace Movies.Application.Repository
         {
             using var connection = await _dbConnectionFactory.CreateConnectionAsync(token);
             return await connection.QuerySingleOrDefaultAsync<(float?, int?)>(new CommandDefinition("""
-                select roung(avg(rating), 1),
+                select round(avg(rating), 1),
                         (select rating 
                          from ratings
                          where movieid = @movieId

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Movies.Contract.Requests
+﻿namespace Movies.Contracts.Requests
 {
     public class UpdateMovieRequest
     {

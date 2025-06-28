@@ -1,6 +1,4 @@
-﻿using Movies.Contract.Requests;
-
-namespace Movies.Contracts.Requests;
+﻿namespace Movies.Contracts.Requests;
 
 public class GetAllMoviesRequest : PagedRequest
 {

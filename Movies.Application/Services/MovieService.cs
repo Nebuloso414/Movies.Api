@@ -1,8 +1,6 @@
 ﻿using FluentValidation;
 using Movies.Application.Models;
 using Movies.Application.Repository;
-using Movies.Application.Validators;
-using System.Reflection.Metadata;
 
 namespace Movies.Application.Services
 {

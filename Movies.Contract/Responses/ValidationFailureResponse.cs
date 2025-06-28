@@ -1,4 +1,4 @@
-﻿namespace Movies.Contract.Responses
+﻿namespace Movies.Contracts.Responses
 {
     public class ValidationFailureResponse
     {

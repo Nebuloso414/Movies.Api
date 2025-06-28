@@ -1,6 +1,4 @@
 ﻿using Movies.Application.Models;
-using Movies.Contract.Requests;
-using Movies.Contract.Responses;
 using Movies.Contracts.Requests;
 using Movies.Contracts.Responses;
 

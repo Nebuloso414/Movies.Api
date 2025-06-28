@@ -1,16 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Movies.Application.Repository;
-using Movies.Application.Models;
-using Movies.Contract.Requests;
-using Movies.Api.Mapping;
-using System.Diagnostics.CodeAnalysis;
-using Movies.Application.Services;
+﻿using Asp.Versioning;
 using Microsoft.AspNetCore.Authorization;
-using Movies.Api.Auth;
-using Movies.Contracts.Requests;
-using Asp.Versioning;
-using Movies.Contract.Responses;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.OutputCaching;
+using Movies.Api.Auth;
+using Movies.Api.Mapping;
+using Movies.Application.Services;
+using Movies.Contracts.Requests;
+using Movies.Contracts.Responses;
 
 namespace Movies.Api.Controllers
 {

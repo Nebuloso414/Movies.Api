@@ -1,6 +1,4 @@
-﻿using System.Runtime.Intrinsics.Arm;
-
-namespace Movies.Api
+﻿namespace Movies.Api
 {
     public static class ApiEndpoints
     {

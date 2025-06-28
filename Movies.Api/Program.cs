@@ -1,15 +1,15 @@
-using Microsoft.IdentityModel.Tokens;
+using Asp.Versioning;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Movies.Api.Auth;
+using Movies.Api.Health;
 using Movies.Api.Mapping;
+using Movies.Api.Swagger;
 using Movies.Application;
 using Movies.Application.Database;
-using System.Text;
-using Movies.Api.Auth;
-using Asp.Versioning;
-using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
-using Movies.Api.Swagger;
-using Movies.Api.Health;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
