@@ -6,7 +6,7 @@ services:
     image: postgres:latest
     restart: always
     environment:
-      - POSTGRES_USER=course
+      - POSTGRES_USER=movies_dbuser
       - POSTGRES_PASSWORD=P@ssw0rd1
       - POSTGRES_DB=movies
     ports:

@@ -13,6 +13,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api.Sdk", "Movies.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api.Sdk.Consumer", "Movies.Api.Sdk.Consumer\Movies.Api.Sdk.Consumer.csproj", "{86B25E1E-0EE5-A4D0-05C6-77EE303B462B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		Helpers\Movies.Api.postman_collection.json = Helpers\Movies.Api.postman_collection.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity.Api", "Identity.Api", "{548BB8F4-8D05-41F3-9E3F-D15AB4EAA551}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Api", "Helpers\Identity.Api\Identity.Api.csproj", "{7EAA0A45-61F4-1420-66FA-DE2C5B7C151D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +48,17 @@ Global
 		{86B25E1E-0EE5-A4D0-05C6-77EE303B462B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86B25E1E-0EE5-A4D0-05C6-77EE303B462B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86B25E1E-0EE5-A4D0-05C6-77EE303B462B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EAA0A45-61F4-1420-66FA-DE2C5B7C151D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EAA0A45-61F4-1420-66FA-DE2C5B7C151D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EAA0A45-61F4-1420-66FA-DE2C5B7C151D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EAA0A45-61F4-1420-66FA-DE2C5B7C151D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{548BB8F4-8D05-41F3-9E3F-D15AB4EAA551} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{7EAA0A45-61F4-1420-66FA-DE2C5B7C151D} = {548BB8F4-8D05-41F3-9E3F-D15AB4EAA551}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2FE44FAA-7CFB-430F-929B-D6546A1DE17D}
